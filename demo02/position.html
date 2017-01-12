@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>position</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style type="text/css">
+    .div2 {
+        width: 200px;
+        height: 100px;
+        background-color: #75CC41;
+        text-align: center;
+        line-height: 100px;
+    }
+    
+    .relative {
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        position: relative;
+        top: 50px;
+        left: 100px;
+        background-color: #CC3F53;
+    }
+    
+    .absolute {
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        top: 50px;
+        left: 100px;
+        background-color: #CC3F53;
+    }
+    
+    .div3 {
+        width: 200px;
+        height: 100px;
+        background-color: #75CC41;
+        text-align: center;
+        line-height: 100px;
+    }
+    
+    .search-box {
+        border: 1px solid #ccc;
+        width: 200px;
+        padding: 5px;
+        height: 24px;
+        margin-left: 50px;
+    }
+    
+    ul {
+        border: 1px solid #ccc;
+        position: absolute;
+        list-style-type: none;
+        width: 200px;
+        left: 50px;
+    }
+    
+    li {
+        list-style-type: none;
+        padding: 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="relative">div1－relative</div>
+    <div class="div2">div2－relative</div>
+    <p>div1设置了相对定位后，将相对于自己初始的位置坐偏移（初始位置保留），div2仍然按照div1初始位置布局。</p>
+    <div style="position: relative;">
+        <span class="absolute">span3-absolute</span>
+        <div class="div3">div4-absolute</div>
+        <p style="margin-top:80px ">span设置了绝对定位后，将脱离文档流，div4将占据span3初始位置。span标签被设置成绝对定位，就可以设置height和width属性</p>
+    </div>
+    <div>
+        <input class="search-box" type="text" placeholder="请输入关键字" value="position" />
+        <ul>
+            <li>position属性</li>
+            <li>position应用</li>
+            <li>position是什么</li>
+            <li>position翻译</li>
+        </ul>
+    </div>
+</body>
+
+</html>

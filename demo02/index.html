@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>demo02</title>
+</head>
+
+<body>
+<div id="main">
+	<h1 align="center">{{title}}</h1>
+	<div v-for="item in topics">
+		<image class='author_icon' :src="item.author.avatar_url">
+		<a>{{item.reply_count+"/"+item.visit_count}}</a>
+		<span class="type_icon" :class="iconClass(item)">{{getTopicStatus(item)}}</span>
+		<a href="#">{{item.title}}</a>
+		<image>
+		<a href="">{{item.last_reply_at}}</a>
+
+	</div>
+</div>
+</body>
+
+</html>

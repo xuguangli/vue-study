@@ -1,0 +1,20 @@
+.author_icon{
+	width:24px;
+	height: 24px;
+}
+.type_icon{
+	display: inline-block;
+	line-height: 20px;
+	text-align: center;
+	width: 36px;
+	height: 20px;
+	border-radius:3px;
+}
+.top{
+	color: white;
+	background-color: #80bd01;
+}
+.tab{
+	color: #999;
+	background-color: #e5e5e5;
+}
