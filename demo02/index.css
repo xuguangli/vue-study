@@ -18,6 +18,9 @@
 	color: #999;
 	background-color: #e5e5e5;
 }
+.hidden{
+	display: none;
+}
 .last_reply{
 	float: right;
 }
@@ -27,6 +30,9 @@
 	border-bottom-width: 0.5px;
 	border-bottom-style:solid;
 	border-bottom-color: #EEEEEE;
+}
+.item_class:hover{
+	background-color: #EEEEEE;
 }
 a{
 	color: #333;

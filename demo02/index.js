@@ -39,8 +39,7 @@ $(document).ready(function() {
                     };
                 } else {
                     return {
-                        display: 'none',
-                        width: '0px'
+                    	'hidden':true
                     }
                 }
             },

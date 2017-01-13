@@ -40,7 +40,6 @@ $(document).ready(function() {
                 this.sortArray.push(0);
                 this.sortArray.pop();//通过array[i]=x这种方式赋值无法触发视图更新，最后两句纯粹为了通知视图刷新
                 //console.log(this.sortArray);
-                //test
             }
         }
     })
