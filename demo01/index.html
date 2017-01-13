@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>demo01</title>
+</head>
+
+<body>
+    <div id="app">
+        <div>{{msg}}</div>
+        <span>将随机产生</span>
+        <input type="text" v-model="length" name="maxLength">
+        <span>个数字进行排序</span>
+        <button @click="randomFun">开始</button>
+        <div>
+            <span class="sortSpan" v-for="item in sortArray">
+        		<p class="bar" :style="{ height: item + 'px' }" ></p>
+        		<p>{{item}}</p>
+        	</span>
+        </div>
+        <div>
+        	<button v-if="randomFinish" @click="bubbleSort">冒泡排序</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+/*test*/
+.sortSpan {
+    margin-left: 10px ;
+    margin-right: 10px ;
+    display:inline-block;
+}
+.bar{
+	width: 20px;
+    background-color: #ccc;
+}
