@@ -43,6 +43,38 @@ $(document).ready(function() {
                         width: '0px'
                     }
                 }
+            },
+            formatReplyTime: function(replytime) {
+                var datetime = new Date(replytime);
+                var nowDate = new Date();
+                var ms = nowDate.getTime() - datetime.getTime();
+                //相差年
+                var years = Math.floor(ms / (24 * 3600 * 1000 * 30 * 12));
+                //相差月
+                var month = Math.floor(ms / (24 * 3600 * 1000 * 30));
+                //相差天
+                var days = Math.floor(ms / (24 * 3600 * 1000));
+                //相差小时
+                var hours = Math.floor(ms / (3600 * 1000));
+                //相差分钟
+                var minutes = Math.floor(ms / (60 * 1000));
+                //相差秒数
+                var seconds = Math.floor(ms / 1000);
+
+                if (years != 0) {
+                    return years + "年前";
+                } else if (month != 0) {
+                    return month + "个月前";
+                } else if (days != 0) {
+                    return days + "天前";
+                } else if (hours != 0) {
+                    return hours + "小时前";
+                } else if (minutes != 0) {
+                    return minutes + "分钟前";
+                } else if (seconds != 0) {
+                    return seconds + "秒前";
+                }
+
             }
         }
     });

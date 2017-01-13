@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
@@ -12,18 +12,17 @@
 </head>
 
 <body>
-<div id="main">
-	<h1 align="center">{{title}}</h1>
-	<div v-for="item in topics">
-		<image class='author_icon' :src="item.author.avatar_url">
-		<a>{{item.reply_count+"/"+item.visit_count}}</a>
-		<span class="type_icon" :class="iconClass(item)">{{getTopicStatus(item)}}</span>
-		<a href="#">{{item.title}}</a>
-		<image>
-		<a href="">{{item.last_reply_at}}</a>
-
-	</div>
-</div>
+    <div id="main">
+        <h1 align="center">{{title}}</h1>
+        <div class="item_class" v-for="item in topics">
+            <image class='author_icon' :src="item.author.avatar_url" />
+            <span>{{item.reply_count+"/"+item.visit_count}}</span>
+            <span class="type_icon" :class="iconClass(item)">{{getTopicStatus(item)}}</span>
+            <a href="#">{{item.title}}</a>
+            <image/>
+            <span class="last_reply">{{formatReplyTime(item.last_reply_at)}}</span>
+        </div>
+    </div>
 </body>
 
 </html>

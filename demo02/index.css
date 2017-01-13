@@ -18,3 +18,19 @@
 	color: #999;
 	background-color: #e5e5e5;
 }
+.last_reply{
+	float: right;
+}
+.item_class{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom-width: 0.5px;
+	border-bottom-style:solid;
+	border-bottom-color: #EEEEEE;
+}
+a{
+	color: #333;
+}
+a: vistied{
+	color:#888;
+}
