@@ -18,7 +18,7 @@
             <image class='author_icon' :src="item.author.avatar_url" />
             <span>{{item.reply_count+"/"+item.visit_count}}</span>
             <span class="type_icon" :class="iconClass(item)">{{getTopicStatus(item)}}</span>
-            <a href="#">{{item.title}}</a>
+            <a :href="getTopicUrl(item.id)">{{item.title}}</a>
             <image/>
             <span class="last_reply">{{formatReplyTime(item.last_reply_at)}}</span>
         </div>

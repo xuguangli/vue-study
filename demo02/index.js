@@ -1,6 +1,7 @@
+var BASIC_URL = "https://cnodejs.org/api/v1";
+var GET_TOPICS = "/topics";
+var GET_TOPIC = "/topic";
 $(document).ready(function() {
-    var BASIC_URL = "https://cnodejs.org/api/v1";
-    var GET_TOPICS = "/topics";
     var vm = new Vue({
         el: '#main',
         data: {
@@ -12,6 +13,9 @@ $(document).ready(function() {
             // both get and set
         },
         methods: {
+        	getTopicUrl:function(id){
+        		return BASIC_URL+GET_TOPIC+"/"+id;
+        	},
             getTopicStatus: function(one) {
                 // console.log(one);
                 if (one.top) {
